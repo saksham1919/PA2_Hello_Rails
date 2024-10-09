@@ -1,0 +1,11 @@
+<p class="notice"><%= notice %></p>
+
+<div class="movie-details">
+  <%= render @movie %>
+</div>
+
+<div class="movie-actions">
+  <%= link_to "Edit this movie", edit_movie_path(@movie), class: "edit-link" %> |
+  <%= link_to "Back to movies", movies_path, class: "back-link" %>
+  <%= button_to "Destroy this movie", @movie, method: :delete, data: { confirm: "Are you sure?" }, class: "delete-button" %>
+</div>

@@ -1,0 +1,43 @@
+<p class="notice"><%= notice %></p>
+
+<% content_for :title, "Movies" %>
+
+<h1 class="movies-title">Movies</h1>
+
+<table class="movies-table">
+  <thead>
+    <tr>
+      <th class="<%= sorted_column_class('title') %>">
+        <%= link_to "Title #{sort_indicator('title')}".html_safe, { sort: "title", direction: toggle_direction('title') }, class: "sortable" %>
+      </th>
+      <th class="<%= sorted_column_class('rating') %>">
+        <%= link_to "Rating #{sort_indicator('rating')}".html_safe, { sort: "rating", direction: toggle_direction('rating') }, class: "sortable" %>
+      </th>
+      <th class="<%= sorted_column_class('release_date') %>">
+        <%= link_to "Release Date #{sort_indicator('release_date')}".html_safe, { sort: "release_date", direction: toggle_direction('release_date') }, class: "sortable" %>
+      </th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie.title %></td>
+        <td><%= movie.rating %></td>
+        <td><%= movie.release_date.strftime("%B %d, %Y") %></td>
+        <td>
+          <%= link_to "Show", movie, class: "action-link" %> 
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td colspan="4">
+        <%= link_to "New movie", new_movie_path, class: "new-movie-link" %>
+      </td>
+    </tr>
+  </tfoot>
+</table>
