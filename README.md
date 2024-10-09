@@ -1,25 +1,5 @@
-# README
+## Deployment Instructions
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+You can view the live application deployed on Heroku at the following link:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-"# PA2_Hello_Rails" 
+[Heroku App](https://rottentomato19-c2517d95bbae.herokuapp.com/movies)
